@@ -1,0 +1,35 @@
+<div class="jumbotron mb-3">
+  <h1 class="text-center">你想對誰說幹話?</h1>
+</div>
+
+<div class="container">
+  <form action="/" method="post">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+      {{#each characters}}
+      <div class="col pr-0">
+        <div class="card h-100">
+          <label class="form-check-label d-block h-100" for="{{this.title_en}}">
+            <div class="img-wrapper">
+              <img src=" {{this.image}}" class="card-img-top" alt="{{this.title_en}}">
+            </div>
+            <div class="card-body d-flex flex-column justify-content-center">
+              <div class="form-check pl-0 text-center">
+                <input class="form-check-input" type="radio" name="job" id="{{this.title_en}}" value="{{this.title_en}}"
+                  {{if_equal this.title_en ../job}}>
+                <span>{{this.title}}</span>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+    <div class="row mt-3">
+      <div class="btn-wrapper col-2">
+        <button type="submit" class="btn btn-dark mr-4">產生幹話</button>
+      </div>
+      <textarea class="form-control col-10" name="trash-talk" id="trash-talk" rows="2" readonly>{{trashTalk}}</textarea>
+    </div>
+  </form>
+</div>

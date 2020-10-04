@@ -1,0 +1,35 @@
+body {
+  font-family:'Microsoft JhengHei', sans-serif;
+}
+
+.jumbotron {
+  padding: 1rem 2rem;
+}
+
+label:hover{
+  cursor: pointer;
+}
+
+.img-wrapper {
+  height: 70%;
+}
+
+.card-img-top {
+  height: 100%;
+}
+
+.card-body {
+  height: 30%;
+  background: #e1e1e1;
+}
+
+.btn {
+  width: 100%;
+}
+
+#trash-talk {
+  border: 1px solid #a0a0a0;
+  background:  #e1e1e1;
+  padding: 0 10px;
+  font-size: 1.5rem;
+}
